@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Pribadi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            darkBg: '#0a0f1c',
+            darkCard: '#111827',
+            accentBlue: '#4b5563',
+            skyBlue: '#9ca3af',
+            blue: {
+              50:'#f9fafb',100:'#f3f4f6',200:'#e5e7eb',300:'#d1d5db',400:'#9ca3af',
+              500:'#6b7280',600:'#4b5563',700:'#374151',800:'#1f2937',900:'#111827',950:'#030712'
+            },
+            sky: {
+              50:'#f9fafb',100:'#f3f4f6',200:'#e5e7eb',300:'#d1d5db',400:'#9ca3af',
+              500:'#6b7280',600:'#4b5563',700:'#374151',800:'#1f2937',900:'#111827',950:'#030712'
+            },
+            indigo: {
+              50:'#f9fafb',100:'#f3f4f6',200:'#e5e7eb',300:'#d1d5db',400:'#9ca3af',
+              500:'#6b7280',600:'#4b5563',700:'#374151',800:'#1f2937',900:'#111827',950:'#030712'
+            },
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
+
+  <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw]">
+    <nav id="pillNavbar" class="relative flex items-center gap-1 sm:gap-2 px-2.5 py-2 rounded-full bg-slate-900/75 backdrop-blur-xl border border-white/15 shadow-2xl">
+      
+      <div id="ghostMascot" class="ghost-mascot absolute -top-9 left-7 z-20 drop-shadow-[0_6px_12px_rgba(107,114,128,0.5)]" aria-hidden="true">
+        <svg width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 2C9.71573 2 3 8.71573 3 17V34.5C3 35.8 4.5 36.5 5.5 35.7L9.5 32.5C10.3 31.9 11.4 31.9 12.2 32.5L16.3 35.8C17.3 36.6 18.7 36.6 19.7 35.8L23.8 32.5C24.6 31.9 25.7 31.9 26.5 32.5L30.5 35.7C31.5 36.5 33 35.8 33 34.5V17C33 8.71573 26.2843 2 18 2Z" fill="white"/>
+          <ellipse cx="13.5" cy="16.5" rx="2.3" ry="3.1" fill="#0f172a"/>
+          <ellipse cx="22.5" cy="16.5" rx="2.3" ry="3.1" fill="#0f172a"/>
+          <circle cx="12.8" cy="15.3" r="0.8" fill="white"/>
+          <circle cx="21.8" cy="15.3" r="0.8" fill="white"/>
+          <ellipse cx="10.2" cy="20" rx="1.8" ry="1" fill="#d1d5db" fill-opacity="0.75"/>
+          <ellipse cx="25.8" cy="20" rx="1.8" ry="1" fill="#d1d5db" fill-opacity="0.75"/>
+        </svg>
+      </div>
+
+      <a href="#home" data-nav="home" class="nav-link active px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold text-white bg-blue-600 shadow-lg shadow-blue-600/30 transition-all duration-300">
+        Home
+      </a>
+      <a href="#about" data-nav="about" class="nav-link px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-all duration-300">
+        About
+      </a>
+      <a href="#portfolio" data-nav="portfolio" class="nav-link px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-all duration-300">
+        Portofolio
+      </a>
+      <a href="#contact" data-nav="contact" class="nav-link px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-all duration-300">
+        Contact
+      </a>
+    </nav>
+  </header>
+
+  <section id="home" class="relative h-[115vh] w-full overflow-hidden flex items-center justify-center">
+    <div id="heroBg" class="absolute inset-0 w-full h-full scale-105 transition-transform duration-100 ease-out">
+      <img 
+        src="aset/baground.jpeg" 
+        onerror="this.src='https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1920&q=80'"
+        alt="Waterfall Landscape" 
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/35 via-slate-950/25 to-[#0a0f1c]"></div>
+    </div>
+
+    <div id="heroText" class="relative z-10 text-center px-4 max-w-5xl mx-auto select-none">
+      <p class="text-sky-400 font-semibold tracking-[0.25em] uppercase text-xs sm:text-sm mb-3 drop-shadow">
+        Frontend designer
+      </p>
+      <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white uppercase leading-[1.05] drop-shadow-[0_10px_30px_rgba(0,0,0,0.65)]">
+        WELCOME TO MY<br />
+        <span class="bg-gradient-to-r from-white via-sky-200 to-blue-400 bg-clip-text text-transparent">PORTOFOLIO</span>
+      </h1>
+      <div class="mt-8 flex justify-center">
+        <a href="#about" class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-medium text-white transition-all">
+          <span>Scroll untuk menjelajah</span>
+          <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="topo-dark relative py-24 sm:py-32 px-4 sm:px-8 lg:px-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center mb-16 sm:mb-20 reveal">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+          About Me
+        </h2>
+        <div class="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center mb-28 reveal">
+        
+        <div class="lg:col-span-4 text-center lg:text-left space-y-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-sky-400 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+            Perkenalan diri
+          </div>
+          <h3 class="text-3xl sm:text-4xl xl:text-5xl font-extrabold leading-tight text-white">
+            Hay, Aku<br />
+            <span id="fullName" class="text-sky-400 select-none">
+              Muhammad Fadhil Hisyam
+            </span>
+          </h3>
+          <p class="text-sm text-slate-400">Aku adalah mahasiswa ULBI D4IT 1B</p>
+          <div class="pt-2">
+            <button onclick="openModal('Curriculum Vitae (CV)', 'coming-soon.png', 'Dokumen Curriculum Vitae resmi sedang dalam tahap pembaruan terbaru. Silakan hubungi saya melalui form kontak di bawah untuk informasi lebih lanjut.')" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition-all">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>View CV</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col items-center">
+          <div id="xrayBox" class="xray-container relative w-64 sm:w-72 md:w-80 aspect-[3/4] rounded-3xl border-2 border-gray-400 bg-gray-500 select-none group">
+            <img 
+              src="aset/dyl.jpeg" 
+              onerror="this.src='https://placehold.co/600x800/6b7280/ffffff?text=Foto+Profil'"
+              alt="Foto Profil" 
+              class="w-full h-full object-cover object-top"
+            />
+
+            <img 
+              id="spidermanLayer"
+              src="aset/hero.jpeg" 
+              onerror="this.src='https://placehold.co/600x800/4b5563/ffffff?text=Spider-Man'"
+              alt="Spider-Man Alter Ego" 
+              class="spiderman-layer object-top"
+            />
+
+            <div id="xrayRing" class="xray-ring"></div>
+
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-slate-950/75 backdrop-blur-md border border-white/15 text-[11px] font-medium text-sky-300 whitespace-nowrap pointer-events-none transition-opacity duration-300 group-hover:opacity-0">
+              ✨ Arahkan kursor ke foto
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 text-center lg:text-left space-y-5">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Sebagai pengembang teknologi dan desainer antarmuka digital, saya berfokus pada pembangunan aplikasi web yang tidak hanya fungsional dan cepat, tetapi juga menghadirkan pengalaman interaktif yang berkesan dan berdampak bagi pengguna.
+          </p>
+          <div class="pt-2">
+            <a href="#portfolio" onclick="switchPortfolioTab('projects')" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition-all">
+              <i data-lucide="code-2" class="w-4 h-4"></i>
+              <span>View Projects</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-28 reveal">
+        
+        <div>
+          <div class="flex items-center gap-3 mb-8">
+            <div class="p-2.5 rounded-xl bg-blue-600/20 border border-blue-500/30 text-sky-400">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white">Education</h3>
+          </div>
+
+          <div class="space-y-5 relative before:absolute before:left-5 before:top-4 before:bottom-4 before:w-0.5 before:bg-slate-800">
+            <div class="relative pl-14 group">
+              <span class="absolute left-2 top-3 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center ring-4 ring-[#0a0f1c] group-hover:scale-110 transition-transform">1</span>
+              <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-blue-500/40 transition-all">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+                  <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Universitas / Perguruan Tinggi</span>
+                  <span class="px-2.5 py-0.5 rounded-full bg-blue-500/15 text-blue-300 text-xs font-medium">2026 - Present</span>
+                </div>
+                <h4 class="text-lg font-bold text-white">Universitas Logistik & Bisnis Internasional</h4>
+                <p class="text-sm text-slate-400 mt-1">Teknik Informatika</p>
+              </div>
+            </div>
+
+            <div class="relative pl-14 group">
+              <span class="absolute left-2 top-3 w-6 h-6 rounded-full bg-slate-700 group-hover:bg-blue-600 text-white text-xs font-bold flex items-center justify-center ring-4 ring-[#0a0f1c] transition-colors">2</span>
+              <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-blue-500/40 transition-all">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+                  <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">MAN 1 Cianjur</span>
+                  <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-xs font-medium">2023 - 2026</span>
+                </div>
+                <h4 class="text-lg font-bold text-white">IPA</h4>
+                <p class="text-sm text-slate-400 mt-1">MY kisah di MAN pokonamah</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-3 mb-8">
+            <div class="p-2.5 rounded-xl bg-blue-600/20 border border-blue-500/30 text-sky-400">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white">Experience</h3>
+          </div>
+
+          <div class="space-y-4 max-h-[370px] overflow-y-auto pr-2">
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-blue-500/40 transition-all">
+              <span class="w-7 h-7 shrink-0 rounded-full bg-blue-600/20 border border-blue-500/40 text-sky-400 text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2">
+                  <h4 class="font-bold text-white text-base truncate">Belajar di ULBI</h4>
+                  <span class="text-xs text-slate-400 shrink-0">2026</span>
+                </div>
+                <p class="text-sm text-sky-400 font-medium">Universitas Logistik & Bisnis Internasional</p>
+                <p class="text-xs text-slate-400 mt-1">Teknik Informatika</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-blue-500/40 transition-all">
+              <span class="w-7 h-7 shrink-0 rounded-full bg-blue-600/20 border border-blue-500/40 text-sky-400 text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2">
+                  <h4 class="font-bold text-white text-base truncate">Belajar di MAN 1 Cianjur</h4>
+                  <span class="text-xs text-slate-400 shrink-0">2023 - 2026</span>
+                </div>
+                <p class="text-sm text-sky-400 font-medium">IPA</p>
+                <p class="text-xs text-slate-400 mt-1">my kisah di MAN</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-blue-500/40 transition-all">
+              <span class="w-7 h-7 shrink-0 rounded-full bg-blue-600/20 border border-blue-500/40 text-sky-400 text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2">
+                  <h4 class="font-bold text-white text-base truncate">Immoartal</h4>
+                  <span class="text-xs text-slate-400 shrink-0">2023-2026</span>
+                </div>
+                <p class="text-sm text-sky-400 font-medium">IMMO 216</p>
+                <p class="text-xs text-slate-400 mt-1">Mobile Legend BB</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-blue-500/40 transition-all">
+              <span class="w-7 h-7 shrink-0 rounded-full bg-blue-600/20 border border-blue-500/40 text-sky-400 text-xs font-bold flex items-center justify-center mt-0.5">4</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2">
+                  <h4 class="font-bold text-white text-base truncate">Coming soon</h4>
+                  <span class="text-xs text-slate-400 shrink-0">????</span>
+                </div>
+                <p class="text-sm text-sky-400 font-medium">-</p>
+                <p class="text-xs text-slate-400 mt-1">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 reveal">
+        
+        <div onclick="goToPortfolioTab('projects')" class="folder-wrapper cursor-pointer group pt-12">
+          <div class="relative h-48 rounded-3xl bg-slate-800/40 border border-white/10 p-4 flex flex-col justify-end">
+            <div class="absolute -top-3 left-6 w-28 h-6 rounded-t-2xl bg-slate-800/80 border-t border-x border-white/15"></div>
+            
+            <div class="absolute inset-x-6 top-2 h-28 flex justify-center items-center pointer-events-none">
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 1" class="folder-card-1 w-28 h-20 object-cover rounded-xl border border-white/20 shadow-lg -mr-6" />
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 2" class="folder-card-2 w-32 h-24 object-cover rounded-xl border border-sky-400/40 shadow-xl z-10" />
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 3" class="folder-card-3 w-28 h-20 object-cover rounded-xl border border-white/20 shadow-lg -ml-6" />
+            </div>
+
+            <div class="relative z-20 h-28 rounded-2xl bg-slate-900/75 backdrop-blur-xl border border-white/15 group-hover:border-blue-500/50 p-5 flex items-end justify-between shadow-2xl transition-colors">
+              <div>
+                <span class="text-3xl font-black text-white block leading-none">6</span>
+                <span class="text-sm font-medium text-slate-300 mt-1 block">Projects</span>
+              </div>
+              <div class="flex items-center gap-1 text-slate-400 group-hover:text-sky-400 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div onclick="goToPortfolioTab('certificates')" class="folder-wrapper cursor-pointer group pt-12">
+          <div class="relative h-48 rounded-3xl bg-slate-800/40 border border-white/10 p-4 flex flex-col justify-end">
+            <div class="absolute -top-3 left-6 w-28 h-6 rounded-t-2xl bg-slate-800/80 border-t border-x border-white/15"></div>
+            
+            <div class="absolute inset-x-6 top-2 h-28 flex justify-center items-center pointer-events-none">
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 1" class="folder-card-1 w-28 h-20 object-cover rounded-xl border border-white/20 shadow-lg -mr-6" />
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 2" class="folder-card-2 w-32 h-24 object-cover rounded-xl border border-sky-400/40 shadow-xl z-10" />
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 3" class="folder-card-3 w-28 h-20 object-cover rounded-xl border border-white/20 shadow-lg -ml-6" />
+            </div>
+
+            <div class="relative z-20 h-28 rounded-2xl bg-slate-900/75 backdrop-blur-xl border border-white/15 group-hover:border-blue-500/50 p-5 flex items-end justify-between shadow-2xl transition-colors">
+              <div>
+                <span class="text-3xl font-black text-white block leading-none">6</span>
+                <span class="text-sm font-medium text-slate-300 mt-1 block">Certificates</span>
+              </div>
+              <div class="flex items-center gap-1 text-slate-400 group-hover:text-sky-400 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div onclick="goToPortfolioTab('awards')" class="folder-wrapper cursor-pointer group pt-12">
+          <div class="relative h-48 rounded-3xl bg-slate-800/40 border border-white/10 p-4 flex flex-col justify-end">
+            <div class="absolute -top-3 left-6 w-28 h-6 rounded-t-2xl bg-slate-800/80 border-t border-x border-white/15"></div>
+            
+            <div class="absolute inset-x-6 top-2 h-28 flex justify-center items-center pointer-events-none">
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 1" class="folder-card-1 w-28 h-20 object-cover rounded-xl border border-white/20 shadow-lg -mr-6" />
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 2" class="folder-card-2 w-32 h-24 object-cover rounded-xl border border-sky-400/40 shadow-xl z-10" />
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/300x200/000000/ffffff?text=COMING+SOON'" alt="Preview 3" class="folder-card-3 w-28 h-20 object-cover rounded-xl border border-white/20 shadow-lg -ml-6" />
+            </div>
+
+            <div class="relative z-20 h-28 rounded-2xl bg-slate-900/75 backdrop-blur-xl border border-white/15 group-hover:border-blue-500/50 p-5 flex items-end justify-between shadow-2xl transition-colors">
+              <div>
+                <span class="text-3xl font-black text-white block leading-none">5</span>
+                <span class="text-sm font-medium text-slate-300 mt-1 block">Awards</span>
+              </div>
+              <div class="flex items-center gap-1 text-slate-400 group-hover:text-sky-400 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="relative bg-gradient-to-b from-[#0a0f1c] via-[#0a0f1c] to-slate-50 pt-16 pb-10 overflow-hidden select-none">
+    <div class="w-full px-2 text-center">
+      <h2 id="giantPortfolioText" class="text-[10.5vw] whitespace-nowrap leading-none font-black tracking-tighter uppercase pr-[0.05em] bg-gradient-to-b from-white via-slate-300 to-slate-900 bg-clip-text text-transparent transition-transform duration-200 ease-out">
+        PORTOFOLIO
+      </h2>
+    </div>
+  </div>
+
+  <section id="portfolio" class="topo-light text-slate-900 py-16 sm:py-24 px-4 sm:px-8 lg:px-16">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-wrap justify-center gap-3 sm:gap-5 mb-14 reveal">
+        <button onclick="switchPortfolioTab('projects')" id="tab-projects" class="portfolio-tab flex items-center gap-2.5 px-6 py-3.5 rounded-2xl font-bold text-sm bg-blue-600 text-white shadow-xl shadow-blue-600/25 transition-all">
+          <i data-lucide="folder-kanban" class="w-4 h-4"></i>
+          <span>Projects</span>
+        </button>
+        <button onclick="switchPortfolioTab('certificates')" id="tab-certificates" class="portfolio-tab flex items-center gap-2.5 px-6 py-3.5 rounded-2xl font-bold text-sm bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 shadow-sm transition-all">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Certificates</span>
+        </button>
+        <button onclick="switchPortfolioTab('awards')" id="tab-awards" class="portfolio-tab flex items-center gap-2.5 px-6 py-3.5 rounded-2xl font-bold text-sm bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 shadow-sm transition-all">
+          <i data-lucide="trophy" class="w-4 h-4"></i>
+          <span>Awards</span>
+        </button>
+      </div>
+
+      <div class="relative group reveal">
+        <button onclick="scrollCarousel(-1)" aria-label="Previous Slide" class="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-xl flex items-center justify-center transition-transform active:scale-90">
+          <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+
+        <div id="portfolioCarousel" class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4 px-2">
+        </div>
+
+        <button onclick="scrollCarousel(1)" aria-label="Next Slide" class="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-xl flex items-center justify-center transition-transform active:scale-90">
+          <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="mt-24 pt-10 reveal">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Gallery & Moments</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Activity Highlights</h3>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 max-w-5xl mx-auto py-6">
+          <div class="collage-item bg-white p-2.5 pb-6 rounded-2xl shadow-lg border border-slate-200/80 -rotate-6 w-40 sm:w-48 cursor-pointer" onclick="openModal('Dokumentasi Kegiatan #1', 'coming-soon.png', 'Pratinjau dokumentasi kegiatan dan kolaborasi tim akan segera hadir.')">
+            <img src="coming-soon.png" onerror="this.src='https://placehold.co/400x300/000000/ffffff?text=COMING+SOON'" alt="Gallery 1" class="w-full h-32 object-cover rounded-xl" />
+            <p class="text-[11px] font-semibold text-slate-500 text-center mt-2.5">Tech Event #01</p>
+          </div>
+
+          <div class="collage-item bg-white p-2.5 pb-6 rounded-2xl shadow-lg border border-slate-200/80 rotate-3 w-44 sm:w-52 cursor-pointer" onclick="openModal('Dokumentasi Kegiatan #2', 'coming-soon.png', 'Pratinjau dokumentasi workshop dan hackathon akan segera hadir.')">
+            <img src="coming-soon.png" onerror="this.src='https://placehold.co/400x300/000000/ffffff?text=COMING+SOON'" alt="Gallery 2" class="w-full h-36 object-cover rounded-xl" />
+            <p class="text-[11px] font-semibold text-slate-500 text-center mt-2.5">Hackathon #02</p>
+          </div>
+
+          <div class="collage-item bg-white p-2.5 pb-6 rounded-2xl shadow-lg border border-slate-200/80 -rotate-3 w-44 sm:w-52 cursor-pointer" onclick="openModal('Dokumentasi Kegiatan #3', 'coming-soon.png', 'Pratinjau dokumentasi seminar teknologi dan komunitas akan segera hadir.')">
+            <img src="coming-soon.png" onerror="this.src='https://placehold.co/400x300/000000/ffffff?text=COMING+SOON'" alt="Gallery 3" class="w-full h-36 object-cover rounded-xl" />
+            <p class="text-[11px] font-semibold text-slate-500 text-center mt-2.5">Community #03</p>
+          </div>
+
+          <div class="collage-item bg-white p-2.5 pb-6 rounded-2xl shadow-lg border border-slate-200/80 rotate-6 w-40 sm:w-48 cursor-pointer" onclick="openModal('Dokumentasi Kegiatan #4', 'coming-soon.png', 'Pratinjau dokumentasi penghargaan dan presentasi proyek akan segera hadir.')">
+            <img src="coming-soon.png" onerror="this.src='https://placehold.co/400x300/000000/ffffff?text=COMING+SOON'" alt="Gallery 4" class="w-full h-32 object-cover rounded-xl" />
+            <p class="text-[11px] font-semibold text-slate-500 text-center mt-2.5">Showcase #04</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="topo-light text-slate-900 py-16 sm:py-24 px-4 sm:px-8 lg:px-16 border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <div class="lg:col-span-5 space-y-8 reveal">
+          
+          <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-200/80">
+            <h3 class="text-2xl font-extrabold text-slate-900">Hubungi</h3>
+            <p class="text-sm text-slate-500 mt-1 mb-6">Ada yang mau didiskusikan? Langsung kirim pesan aja ya..!</p>
+
+            <form id="contactForm" class="space-y-4">
+              <div class="relative">
+                <i data-lucide="user" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                <input type="text" id="contactName" required placeholder="Nama Anda" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all" />
+              </div>
+
+              <div class="relative">
+                <i data-lucide="mail" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                <input type="email" id="contactEmail" required placeholder="Email Anda" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all" />
+              </div>
+
+              <div class="relative">
+                <i data-lucide="message-square" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                <textarea id="contactMessage" rows="4" required placeholder="Pesan Anda" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-600/25 transition-all">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Kirim Pesan</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-200/80">
+            <h3 class="text-xl font-extrabold text-slate-900 mb-5">Find Me</h3>
+            
+            <div class="space-y-3">
+              <a href="#contact" onclick="showToast('Membuka profil LinkedIn...')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-slate-200/70 hover:border-blue-200 transition-all group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-sm">in</div>
+                  <div>
+                    <p class="font-bold text-sm text-slate-900">Let's Connect</p>
+                    <p class="text-xs text-slate-500">Coming soon</p>
+                  </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+              </a>
+
+              <a href="https://www.instagram.com/fdiill_h?gwpx=MnJmczN5b3hibzJ0" onclick="showToast('Membuka profil Instagram...')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-pink-50 border border-slate-200/70 hover:border-pink-200 transition-all group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 text-white flex items-center justify-center">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold text-sm text-slate-900">Instagram</p>
+                    <p class="text-xs text-slate-500">@fdiil.h</p>
+                  </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-pink-600 transition-colors"></i>
+              </a>
+
+              <a href="https://github.com/MuhammadFadhilHisyam2008-IT" onclick="showToast('Membuka profil GitHub...')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200/70 hover:border-slate-300 transition-all group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold text-sm text-slate-900">GitHub</p>
+                    <p class="text-xs text-slate-500">@MuhammadFadhilHisyam2008-IT</p>
+                  </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-slate-900 transition-colors"></i>
+              </a>
+
+              <a href="#contact" onclick="showToast('Membuka profil TikTok...')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200/70 hover:border-slate-300 transition-all group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-slate-950 text-white flex items-center justify-center">
+                    <i data-lucide="music-2" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold text-sm text-slate-900">TikTok</p>
+                    <p class="text-xs text-slate-500">Coming soon</p>
+                  </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-slate-900 transition-colors"></i>
+              </a>
+            </div>
+
+            <div class="mt-5 rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative group cursor-pointer" onclick="openModal('Social Media Update', 'coming-soon.png', 'Konten dan tautan terbaru akan segera dirilis.')">
+              <img src="coming-soon.png" onerror="this.src='https://placehold.co/600x300/000000/ffffff?text=COMING+SOON'" alt="Coming Soon Banner" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lg:col-span-7 space-y-8 reveal">
+          
+          <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-200/80">
+            <div class="flex items-center gap-2.5 mb-6">
+              <i data-lucide="message-circle-plus" class="w-6 h-6 text-blue-600"></i>
+              <h3 class="text-2xl font-extrabold text-slate-900">Tulis Komentar</h3>
+            </div>
+
+            <form id="commentForm" class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">Nama</label>
+                <input type="text" id="commentAuthor" required placeholder="Masukkan nama kamu" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">Komentar</label>
+                <textarea id="commentText" rows="3" required placeholder="Tulis komentar kamu di sini..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all resize-none"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">Foto Profil <span class="font-normal text-slate-400">(optional)</span></label>
+                <label for="commentAvatarInput" class="flex flex-col items-center justify-center w-full py-4 px-4 rounded-2xl border-2 border-dashed border-blue-200 bg-blue-50/40 hover:bg-blue-50 cursor-pointer transition-colors">
+                  <div class="flex items-center gap-2 text-blue-600 font-semibold text-sm">
+                    <i data-lucide="image-plus" class="w-4 h-4"></i>
+                    <span id="fileNameLabel">Choose Profile Photo</span>
+                  </div>
+                  <span class="text-[11px] text-slate-400 mt-1">Max file size: 5MB</span>
+                  <input type="file" id="commentAvatarInput" accept="image/*" class="hidden" />
+                </label>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-600/25 transition-all">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Kirim Komentar</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-200/80">
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="messages-square" class="w-5 h-5 text-blue-600"></i>
+                <h3 class="text-xl font-extrabold text-slate-900">
+                  Komentar <span id="commentCount" class="text-blue-600">(5)</span>
+                </h3>
+              </div>
+              <span class="text-xs font-medium text-slate-400">Terbaru</span>
+            </div>
+
+            <div id="commentsList" class="space-y-4 max-h-[420px] overflow-y-auto pr-1">
+              <div class="flex items-start justify-between gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold text-sm flex items-center justify-center shrink-0">Z</div>
+                  <div>
+                    <h4 class="font-bold text-sm text-slate-900">fiqri cihanjuang</h4>
+                    <p class="text-sm text-slate-600 mt-0.5">keren kamu dil</p>
+                  </div>
+                </div>
+                <span class="text-[11px] text-slate-400 shrink-0">Oct 26, 2026</span>
+              </div>
+
+              <div class="flex items-start justify-between gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold text-sm flex items-center justify-center shrink-0">L</div>
+                  <div>
+                    <h4 class="font-bold text-sm text-slate-900">sajid ngamprah</h4>
+                    <p class="text-sm text-slate-600 mt-0.5">hayu push immo woyy</p>
+                  </div>
+                </div>
+                <span class="text-[11px] text-slate-400 shrink-0">Oct 26, 2026</span>
+              </div>
+
+              <div class="flex items-start justify-between gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-full bg-sky-600 text-white font-bold text-sm flex items-center justify-center shrink-0">J</div>
+                  <div>
+                    <h4 class="font-bold text-sm text-slate-900">brian</h4>
+                    <p class="text-sm text-slate-600 mt-0.5">hebat kamu dil</p>
+                  </div>
+                </div>
+                <span class="text-[11px] text-slate-400 shrink-0">Oct 26, 2026</span>
+              </div>
+
+              <div class="flex items-start justify-between gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold text-sm flex items-center justify-center shrink-0">N</div>
+                  <div>
+                    <h4 class="font-bold text-sm text-slate-900">ihsan</h4>
+                    <p class="text-sm text-slate-600 mt-0.5">digendong sama ling cianjur wkwkwk </p>
+                  </div>
+                </div>
+                <span class="text-[11px] text-slate-400 shrink-0">Oct 26, 2026</span>
+              </div>
+
+              <div class="flex items-start justify-between gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-full bg-slate-800 text-white font-bold text-sm flex items-center justify-center shrink-0">R</div>
+                  <div>
+                    <h4 class="font-bold text-sm text-slate-900">tekuu</h4>
+                    <p class="text-sm text-slate-600 mt-0.5">emote ishowspeed ahk</p>
+                  </div>
+                </div>
+                <span class="text-[11px] text-slate-400 shrink-0">Oct 24, 2026</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="mt-20 pt-8 border-t border-slate-200 text-center">
+        <p class="text-xs sm:text-sm text-slate-500 font-medium">
+          © Portofolio Dyl.
+        </p>
+      </footer>
+
+    </div>
+  </section>
+
+  <div id="detailModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
+    <div class="bg-white text-slate-900 rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 animate-[fadeIn_0.2s_ease-out]">
+      <div class="relative">
+        <img id="modalImage" src="coming-soon.png" onerror="this.src='https://placehold.co/800x450/000000/ffffff?text=COMING+SOON'" alt="Preview" class="w-full h-60 object-cover" />
+        <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white flex items-center justify-center transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 sm:p-8">
+        <span class="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-2">Preview Item</span>
+        <h4 id="modalTitle" class="text-2xl font-extrabold text-slate-900">Judul Item</h4>
+        <p id="modalDesc" class="text-sm text-slate-600 mt-3 leading-relaxed">Deskripsi detail item.</p>
+        <div class="mt-6 flex justify-end">
+          <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-colors">
+            Tutup Pratinjau
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastBox" class="fixed bottom-6 right-6 z-50 translate-y-24 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-slate-900 text-white shadow-2xl border border-white/15">
+      <div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <span id="toastMessage" class="text-sm font-medium">Pesan berhasil dikirim!</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
